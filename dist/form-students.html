@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Book.net</title>
+
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/index.html">Book.net</a>
+
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard.html">Dashboard</a>
+            </li>
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Gêneros
+              </a>
+              <!-- Dropdown menu -->
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#"
+                    >desenvolvimento</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#">internet</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#"
+                    >banco de dados</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#">redes</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#"
+                    >sistemas operacionais</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Outros</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="form-students.html"
+                tabindex="-1"
+                aria-disabled="false"
+                >Alunos</a
+              >
+            </li>
+          </ul>
+          <!-- Left links -->
+
+          <!-- Search form -->
+          <form class="d-flex input-group w-auto">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Pesquisar"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-primary"
+              type="button"
+              data-mdb-ripple-color="dark"
+            >
+              Buscar
+            </button>
+          </form>
+
+          <ul class="navbar-nav ms-2 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                data-mdb-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Entrar
+              </a>
+              <div
+                class="dropdown-menu p-3 login-box dropdown-menu-lg-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <form
+                  class="form-horizontal"
+                  method="post"
+                  accept-charset="UTF-8"
+                >
+                  <legend>
+                    Login
+                    <span class="material-icons float-end mt-2"> login </span>
+                  </legend>
+                  <hr />
+                  <input
+                    class="form-control login mb-3"
+                    type="email"
+                    name="username"
+                    placeholder="Email"
+                  />
+                  <input
+                    class="form-control login mb-3"
+                    type="text"
+                    name="senha"
+                    placeholder="Senha"
+                  />
+                  <div class="d-flex justify-content-between">
+                    <a href="/cadastrar.html" class="text-uppercase pt-2"
+                      >cadastrar</a
+                    >
+                    <input
+                      class="btn btn-primary flex-end"
+                      type="button"
+                      name="submit"
+                      value="Entrar"
+                    />
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Right Links -->
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+
+    <main>
+      <div class="container">
+        <div class="container-fluid my-5 d-flex justify-content-between">
+          <h3 class="">Alunos</h3>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-mdb-toggle="modal"
+            data-mdb-target="#exampleModal"
+          >
+            Adicionar
+          </button>
+        </div>
+        <div class="alerts">
+          <div class="alert alert-danger" role="alert">
+            <div
+              class="position-absolute"
+              style="right: 8px; cursor: pointer"
+              id="close-alerts"
+            >
+              <div class="material-icons">close</div>
+            </div>
+            <ul>
+              <li>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Dolores voluptates quas quod
+              </li>
+              <li>
+                voluptas exercitationem consectetur, omnis dolorem! Animi,
+                atque.
+              </li>
+              <li>
+                voluptas exercitationem consectetur, omnis dolorem! Animi,
+                atque.
+              </li>
+              <li>Lorem ipsum,</li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Adicionar aluno
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-mdb-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form class="form student-form md-form">
+                  <h5>Informações do aluno</h5>
+                  <div class="row mb-4">
+                    <div class="col col-md col-sm-12 mt-2">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="student-name"
+                          class="form-control"
+                        />
+                        <label class="form-label" for="student-name">
+                          Nome do aluno
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col col-md col-sm-12 mt-2">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="student-code"
+                          class="form-control"
+                        />
+                        <label class="form-label" for="student-code">
+                          Código do aluno
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h5>Notas</h5>
+                  <div class="row mb-4">
+                    <div class="col col-sm-12 mt-2">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="student-first-grade"
+                          class="form-control"
+                        />
+                        <label class="form-label" for="student-first-grade">
+                          Primeira nota
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col col-sm-12 mt-2">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="student-second-grade"
+                          class="form-control"
+                        />
+                        <label class="form-label" for="student-second-grade">
+                          Segunda nota
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col col-sm-12 mt-2">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="student-second-grade"
+                          class="form-control"
+                        />
+                        <label class="form-label" for="student-second-grade">
+                          Nota da prova final
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <h5>Frequência</h5>
+                  <div class="row mb-4">
+                    <div class="col col-md col-sm-12 mt-2">
+                      <div class="form-outline">
+                        <input
+                          type="text"
+                          id="student-frequency"
+                          class="form-control"
+                        />
+                        <label class="form-label" for="student-frequency">
+                          Frequência do aluno
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-mdb-dismiss="modal"
+                >
+                  Fechar
+                </button>
+                <button type="submit" id="send-data" class="btn btn-primary">
+                  Salvar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <table class="table clearfix table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col" class="">Nome</th>
+              <th scope="col">Primeira Nota</th>
+              <th scope="col">Segunda Nota</th>
+              <th scope="col">Nota Final</th>
+              <th scope="col">Frequência</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="100">
+                <div class="bg-blue float-start">
+                  <p>
+                    Aprovados: <span class="text-success resultable">0</span>
+                  </p>
+                  <p>
+                    Reprovados: <span class="text-danger resultable">0</span>
+                  </p>
+                </div>
+                <div class="float-end">
+                  <p>
+                    Média Geral:
+                    <span class="resultable text-info">0.0</span>
+                  </p>
+                </div>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </main>
+    <script src="bundle.js"></script>
+  </body>
+</html>

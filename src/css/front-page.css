@@ -1,0 +1,44 @@
+.image-front {
+  /* background-image: url("https://positiveroutines.com/wp-content/uploads/2018/12/stack-of-books-against-blue-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  mix-blend-mode: darken;
+  background-blend-mode: lighten;
+  background-color: #242f40;
+  min-height: 95vh;
+  justify-content: center;
+  background-attachment: fixed;
+  align-items: center; */
+  background-image: url("https://img3.stockfresh.com/files/f/freesoulproduction/m/28/1663128_stock-photo-vector-modern-bookshelf.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  background-color: linear-gradient(
+    90deg,
+    hsla(333, 100%, 53%, 1) 0%,
+    hsla(33, 94%, 57%, 1) 100%
+  );
+  -blend-mode: darken;
+  background-blend-mode: multiply;
+  background-color: #3b4252;
+
+  color: #bf616a;
+}
+
+.image-front .container {
+  height: 95vh;
+}
+
+.intro-info-content {
+  border-radius: 0px 0px 5px 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.intro-info-content .btn-shop {
+  color: var(--green-terminal);
+}
+
+.intro-info-content .btn-lookbook {
+  color: var(--yellow-terminal);
+}

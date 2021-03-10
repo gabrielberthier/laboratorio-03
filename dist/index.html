@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Book.net</title>
+
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="/index.html">Book.net</a>
+
+        <!-- Toggle button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard.html">Dashboard</a>
+            </li>
+            <!-- Navbar dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Gêneros
+              </a>
+              <!-- Dropdown menu -->
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#"
+                    >desenvolvimento</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#">internet</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#"
+                    >banco de dados</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#">redes</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-capitalize" href="#"
+                    >sistemas operacionais</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Outros</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="form-students.html" tabindex="-1"
+                >Alunos</a
+              >
+            </li>
+          </ul>
+          <!-- Left links -->
+
+          <!-- Search form -->
+          <form class="d-flex input-group w-auto">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Pesquisar"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-primary"
+              type="button"
+              data-mdb-ripple-color="dark"
+            >
+              Buscar
+            </button>
+          </form>
+
+          <ul class="navbar-nav ms-2 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                data-mdb-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Entrar
+              </a>
+              <div
+                class="dropdown-menu p-3 login-box dropdown-menu-lg-end"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <form
+                  class="form-horizontal"
+                  method="post"
+                  accept-charset="UTF-8"
+                >
+                  <legend>
+                    Login
+                    <span class="material-icons float-end mt-2"> login </span>
+                  </legend>
+                  <hr />
+                  <input
+                    class="form-control login mb-3"
+                    type="email"
+                    name="username"
+                    placeholder="Email"
+                  />
+                  <input
+                    class="form-control login mb-3"
+                    type="text"
+                    name="senha"
+                    placeholder="Senha"
+                  />
+                  <div class="d-flex justify-content-between">
+                    <a href="/cadastrar.html" class="text-uppercase pt-2"
+                      >cadastrar</a
+                    >
+                    <input
+                      class="btn btn-primary flex-end"
+                      type="button"
+                      name="submit"
+                      value="Entrar"
+                    />
+                  </div>
+                </form>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Right Links -->
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+
+    <main>
+      <div class="">
+        <div class="view" data-jarallax='{"speed": 0.2}'>
+          <div class="rgba-white-light image-front">
+            <div
+              class="container d-flex justify-content-center align-items-center"
+              style="overflow-x: hidden"
+            >
+              <div class="terminal mt-3">
+                <div class="container-fluid">
+                  <div class="fakeMenu">
+                    <div class="fakeButtons fakeClose"></div>
+                    <div class="fakeButtons fakeMinimize"></div>
+                    <div class="fakeButtons fakeZoom"></div>
+                    <div class="float-right">
+                      <span class="material-icons"> code </span>
+                    </div>
+                  </div>
+                  <div
+                    class="intro-info-content text-center background-terminal pb-5"
+                  >
+                    <h1
+                      class="display-3 mb-5 wow fadeInDown pt-3"
+                      data-wow-delay="0.3s"
+                    >
+                      BOOK.<a class="font-weight-bold blue-terminal">NET</a>
+                    </h1>
+                    <p class="green-terminal">/*Não perca*/</p>
+
+                    <div class="typewriter">
+                      <p
+                        class="text-uppercase mb-5 mt-1 font-weight-bold wow fadeInDown h6 d-inline-block"
+                        data-wow-delay="0.3s"
+                      >
+                        <span class="material-icons dollar-sign">
+                          attach_money
+                        </span>
+                        Ofertas especiais para geeks
+                      </p>
+                    </div>
+                    <a
+                      class="btn btn-outline-indigo btn-lg wow fadeInDown btn-shop"
+                      data-wow-delay="0.3s"
+                      >Shop</a
+                    >
+                    <a
+                      class="btn btn-indigo btn-lg wow fadeInDown btn-lookbook"
+                      data-wow-delay="0.3s"
+                      >Lookbook</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <!--Section: Products v.3-->
+        <section class="section pb-3 wow fadeIn" data-wow-delay="0.3s">
+          <!--Section heading-->
+          <h1 class="font-weight-bold text-center h1 my-5">Our bestsellers</h1>
+          <!--Section description-->
+          <p class="text-center grey-text mb-5 mx-auto w-responsive">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
+            error amet numquam iure provident voluptate esse quasi, veritatis
+            totam voluptas nostrum quisquam eum porro a pariatur accusamus
+            veniam.
+          </p>
+
+          <!--Grid row-->
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4">
+              <!--Card-->
+              <div class="card">
+                <!--Card image-->
+                <div class="view overlay z-depth-1">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0155/7645/products/node-ebook-atualizado_large.jpg?v=1516282095"
+                    class="card-img-top"
+                    alt=""
+                  />
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <!--Card image-->
+
+                <!--Card content-->
+                <div class="card-body text-center no-padding">
+                  <!--Category & Title-->
+                  <a href="" class="text-muted">
+                    <h5>Desenvolvimento</h5>
+                  </a>
+                  <h4 class="card-title">
+                    <strong>
+                      <a href="">Node.js</a>
+                    </strong>
+                  </h4>
+
+                  <!--Description-->
+                  <p class="card-text">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor.
+                  </p>
+
+                  <!--Card footer-->
+                  <div class="card-footer">
+                    <span class="float-left">59$ </span>
+                    <span class="float-right">
+                      <a
+                        class=""
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Add to Wishlist"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <!--Card-->
+              <div class="card">
+                <!--Card image-->
+                <div class="view overlay z-depth-1">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0155/7645/products/Amazon-Java-9_large.png?v=1506020938"
+                    class="card-img-top"
+                    alt=""
+                  />
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <!--Card image-->
+
+                <!--Card content-->
+                <div class="card-body text-center no-padding">
+                  <!--Category & Title-->
+                  <a href="" class="text-muted">
+                    <h5>Desenvolvimento</h5>
+                  </a>
+                  <h4 class="card-title">
+                    <strong>
+                      <a href="">Java 9</a>
+                    </strong>
+                  </h4>
+
+                  <!--Description-->
+                  <p class="card-text">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor.
+                  </p>
+
+                  <!--Card footer-->
+                  <div class="card-footer">
+                    <span class="float-left">Free </span>
+                    <span class="float-right">
+                      <a
+                        class=""
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Add to Wishlist"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <!--Card-->
+              <div class="card">
+                <!--Card image-->
+                <div class="view overlay z-depth-1">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0155/7645/products/4MRnPs-gpoIYhwqavVoX2Mc64HktcIqFtQOyX8x0yDo_large.jpg?v=1480680976"
+                    class="card-img-top"
+                    alt=""
+                  />
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <!--Card image-->
+
+                <!--Card content-->
+                <div class="card-body text-center no-padding">
+                  <!--Category & Title-->
+                  <a href="" class="text-muted">
+                    <h5>DBA</h5>
+                  </a>
+                  <h4 class="card-title">
+                    <strong>
+                      <a href="">Big Data</a>
+                    </strong>
+                  </h4>
+
+                  <!--Description-->
+                  <p class="card-text">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor.
+                  </p>
+
+                  <!--Card footer-->
+                  <div class="card-footer">
+                    <span class="float-left"
+                      >59$
+                      <span class="discount">199$</span>
+                    </span>
+                    <span class="float-right">
+                      <a
+                        class=""
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Add to Wishlist"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+              <!--Card-->
+              <div class="card">
+                <!--Card image-->
+                <div class="view overlay z-depth-1">
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0155/7645/products/colecao-webdesign-featured_3cbf8794-4719-45b9-83e4-e23fc96fea04_large.png?v=1416401953"
+                    class="card-img-top"
+                    alt=""
+                  />
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+                <!--Card image-->
+
+                <!--Card content-->
+                <div class="card-body text-center no-padding">
+                  <!--Category & Title-->
+                  <a href="" class="text-muted">
+                    <h5>Web Design</h5>
+                  </a>
+                  <h4 class="card-title">
+                    <strong>
+                      <a href="">Introdução à WEB</a>
+                    </strong>
+                  </h4>
+
+                  <!--Description-->
+                  <p class="card-text">
+                    Neque porro quisquam est, qui dolorem ipsum quia dolor.
+                  </p>
+
+                  <!--Card footer-->
+                  <div class="card-footer">
+                    <span class="float-left">29$ </span>
+                    <span class="float-right">
+                      <a
+                        class=""
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Add to Wishlist"
+                      >
+                        <i class="fas fa-heart"></i>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="bundle.js"></script>
+  </body>
+</html>
