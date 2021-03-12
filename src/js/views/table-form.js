@@ -1,44 +1,79 @@
-const campos = [
-  "name",
-  "first-grade",
-  "first-grade",
-  "frequency",
-  "final",
-];
+import { kebabCase, camelCase } from "../utils/case-transform";
+import { StudentGrade } from "../models/student-grade";
+import { InvalidInputBagError } from "../controllers/errors/InvalidInputBag";
 
-const alerts = document.querySelector(".alerts");
+export class TableFormView {
+  constructor() {
+    this.alerts = document.querySelector(".alerts");
+    this.initAlerts();
+    this.listErros = document.getElementById("list-errors");
+    this.modal = document.querySelector(".modal");
+    this.closeModalButton = document.querySelector("button.btn-close");
+  }
 
+  initAlerts() {
+    document.querySelector("#close-alerts").addEventListener("click", () => {
+      this.alerts?.classList.toggle("d-none");
+    })
+  }
 
-function createTableRow() {
-  const tbody = document.querySelector('table tbody');
+  /**
+ * 
+ * @param {StudentGrade} studentGrade  
+ */
+  createTableRow(studentGrade) {
+    const tbody = document.querySelector('table tbody');
 
-  let index = 0;
-  const tr = document.createElement('tr');
+    let index = 0;
+    const tr = document.createElement('tr');
 
-  const td = document.createElement('td');
-  td.textContent = ++index;
-  td.id = `${index}-${new Date().getTime()}`;
-  tr.appendChild(td);
-
-  campos.forEach((campo) => {
     const td = document.createElement('td');
-    td.textContent = campo;
-    td.id = `${campo}-${new Date().getTime()}`;
+    td.textContent = ++index;
+    td.id = `${index}-${new Date().getTime()}`;
     tr.appendChild(td);
-  });
 
-  tbody.appendChild(tr);
+    for (const [field, value] of Object.entries(studentGrade)) {
+      const td = document.createElement('td');
+      td.textContent = value;
+      const kebabField = kebabCase(field);
+      td.id = `${kebabField}-${new Date().getTime()}`;
+      tr.appendChild(td);
+    }
+
+    tbody.appendChild(tr);
+    this.closeModalButton.click();
+  }
+  /**
+   * 
+   * @param {InvalidInputBagError} errors 
+   */
+  presentErrors(errorsList) {
+    this.alerts.classList.remove("d-none");
+    this.listErros.innerHTML = "";
+    errorsList.errors.forEach(element => {
+      const li = document.createElement("li");
+      li.textContent = element;
+      this.listErros.appendChild(li);
+    });
+    this.closeModalButton.click();
+  }
+
+  getInputValues() {
+    const inputs = [
+      "student-name",
+      "student-code",
+      "student-first-grade",
+      "student-second-grade",
+      "student-final-grade",
+      "student-frequency"
+    ];
+    const inputValues = inputs
+      .map(el => document.getElementById(el))
+      .reduce((acc, current) => {
+        const name = camelCase(current.id);
+        acc[name] = current.value;
+        return acc;
+      }, {});
+    return inputValues;
+  }
 }
-
-const tableFormHandler = (event) => {
-  event.preventDefault();
-
-
-}
-
-//document.querySelector('.botao').addEventListener('click', function(event) {
-document.querySelector('.student-form').addEventListener('submit', tableFormHandler);
-document.querySelector("#send-data").addEventListener("click", tableFormHandler);
-document.querySelector("#close-alerts").addEventListener("click", () => {
-  alerts.classList.toggle("d-none");
-})

@@ -9,7 +9,7 @@ const config = {
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: './',
   },
   module: {
     rules: [
