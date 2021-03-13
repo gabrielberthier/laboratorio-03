@@ -332,6 +332,7 @@
               <th scope="col">Segunda Nota</th>
               <th scope="col">Nota Final</th>
               <th scope="col">Frequência</th>
+              <th scope="col">Situação</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -340,16 +341,18 @@
               <td colspan="100">
                 <div class="bg-blue float-start">
                   <p>
-                    Aprovados: <span class="text-success resultable">0</span>
+                    Aprovados:
+                    <span id="aproveds" class="text-success resultable">0</span>
                   </p>
                   <p>
-                    Reprovados: <span class="text-danger resultable">0</span>
+                    Reprovados:
+                    <span id="reproveds" class="text-danger resultable">0</span>
                   </p>
                 </div>
                 <div class="float-end">
                   <p>
                     Média Geral:
-                    <span class="resultable text-info">0.0</span>
+                    <span id="average" class="resultable text-info">0.0</span>
                   </p>
                 </div>
               </td>

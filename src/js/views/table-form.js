@@ -1,6 +1,7 @@
 import { kebabCase, camelCase } from "../utils/case-transform";
 import { StudentGrade } from "../models/student-grade";
 import { InvalidInputBagError } from "../controllers/errors/InvalidInputBag";
+import { TFooterView } from "./tfooter";
 
 export class TableFormView {
   constructor() {
@@ -9,6 +10,7 @@ export class TableFormView {
     this.listErros = document.getElementById("list-errors");
     this.modal = document.querySelector(".modal");
     this.closeModalButton = document.querySelector("button.btn-close");
+    this.footerView = new TFooterView();
   }
 
   initAlerts() {
@@ -32,16 +34,18 @@ export class TableFormView {
     td.id = `${index}-${new Date().getTime()}`;
     tr.appendChild(td);
 
-    for (const [field, value] of Object.entries(studentGrade)) {
+    for (const [field, value] of Object.entries(studentGrade.asRowRegistry())) {
       const td = document.createElement('td');
       td.textContent = value;
       const kebabField = kebabCase(field);
       td.id = `${kebabField}-${new Date().getTime()}`;
       tr.appendChild(td);
     }
-
     tbody.appendChild(tr);
     this.closeModalButton.click();
+    this.alerts?.classList.add("d-none");
+    this.cleanForm();
+    this.footerView.notifyAdded(studentGrade);
   }
   /**
    * 
@@ -75,5 +79,17 @@ export class TableFormView {
         return acc;
       }, {});
     return inputValues;
+  }
+
+  cleanForm() {
+    const inputs = [
+      "student-name",
+      "student-code",
+      "student-first-grade",
+      "student-second-grade",
+      "student-final-grade",
+      "student-frequency"
+    ];
+    inputs.map(el => document.getElementById(el)).forEach(el => el.value = "");
   }
 }

@@ -32,9 +32,8 @@ class StudentTableController {
         studentFrequency,
         studentFinalGrade
       );
-      const rowRegistry = this.student.asRowRegistry();
-      console.log(rowRegistry);
-      this.view.createTableRow(rowRegistry);
+
+      this.view.createTableRow(this.student);
     } catch (exception) {
       if (exception instanceof InvalidInputBagError)
         return this.view.presentErrors(exception);
@@ -65,7 +64,11 @@ class StudentTableController {
       },
       studentFinalGrade: {
         validation: (value) => {
-          if (!value) {
+          const { studentFirstGrade, studentSecondGrade } = vals;
+          const grade1 = parseFloat(studentFirstGrade);
+          const grade2 = parseFloat(studentSecondGrade);
+          const hasPassed = grade1 && grade2 && (((grade1 + grade2) / 2) >= 70);
+          if (!value && hasPassed) {
             return true;
           }
           return isValidFloat(value);
